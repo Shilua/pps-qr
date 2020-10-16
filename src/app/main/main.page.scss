@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(240, 240, 240);
+}
+
+.container-saldo {
+    width: 100%;
+    height: 40%;
+    background: #ff9500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titulo {
+    font-size: 200%;
+}
+.saldo h1 {
+    font-size: 600%;
+}
+
+.container-acciones {
+    width: 100%;
+    height: 50%;
+    border-bottom: rgba(180, 180, 180, 0.486) 2px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //padding-top: 10%;
+}
+
+.container-carga {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.container-vaciar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //align-items: center;
+    text-align: center;
+    padding-top: 3%;
+    
+}
+
+
+.carga {
+    background: #ff9500;
+    width: 71%;
+    height: 70%;
+    min-height: 70%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10%;
+    //left: 9%;
+    box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.75);
+    transition: linear background 0.1s;
+    & img {
+        position: relative;
+        width: 75%;
+        height: 75%;
+    }
+
+    &:active{
+        background: #965700;
+        
+    }
+}
+
+
+
+.vaciar {
+    background: #ff9500;
+    width: 80%;
+    height: 85%;
+    //min-height: 115px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    //position: relative;
+    //top: 10%;
+    //right: 9%;
+    box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.75);
+    transition: linear background 0.1s;
+    & img {
+        position: relative;
+        width: 12%;
+        height: 75%;
+    }
+    &:active{
+        background: #965700;
+        
+    }
+}
+
+
+.container-titulo-acciones {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.titulo-carga {
+    //width: 115px;
+    //height: 115px;
+    position: relative;
+    top: 12%;
+    color: #333;
+    font-size: 200%;
+    //padding-top: 5%;
+}
+
+.titulo-vaciar {
+    position: relative;
+    left: 2%;
+    //top: 10%;
+    color: #333;
+    font-size: 200%;
+    //padding-top: 5%;
+}
+
+
+
+.container-historial {
+    width: 100%;
+    height: 35%;
+    color: #333333;
+}
+
+
+.back {
+    position: absolute;
+    top: 4%;
+    left: 6%;
+    transition: ease color 0.2s;
+    font-size: 3em;
+    &:active {
+        color: #333333;
+    }
+}
+
+.container-error {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background-color: rgb(189, 50, 50);
+    box-shadow: 1px 13px 24px 9px rgba(0,0,0,0.75);
+    display: none;
+  
+  }
+  
+  .img-error {
+    
+    height: 50%;
+    width: 100%;
+    background: url(../../assets/img/error.png) center no-repeat;
+    
+  }
+  
+  .error-mensaje {
+    height: 50%;
+    width: 100%;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 10%;
+  }
+  
+  
+  .error-admin:before {
+    Content: "Cargas excedidas por administrador";
+    font-size: 20px;
+  }
+  
+  .error-user:before {
+    Content: "Cargas excedidas por usuario";
+    font-size: 20px;
+  }
+
+  .error-codigo:before {
+    Content: "Código incorrecto";
+    font-size: 20px;
+  }

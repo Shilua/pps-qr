@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="container-saldo">
+    <h3 class="titulo">Saldo</h3>
+    <div class="saldo">
+      <h1 class="visor-saldo">0</h1>
+    </div>
+  </div>
+  <div class="container-acciones">
+    <div class="container-carga" (click)="startScanning()">
+      <div class="carga">
+        <img src="../../assets/img/qr.png" alt="">
+      </div>
+      <p class="titulo-accion titulo-carga">Cargar</p>
+    </div>
+
+  </div>
+
+  <div class="container-vaciar" (click)="limpiar()">
+    <div class="vaciar">
+      <img src="../../assets/img/trash-can.png" alt="">
+      <p class="titulo-accion titulo-vaciar">Vaciar</p>
+    </div>
+    
+  </div>
+
+  <div class="container-error">
+    <div class="img-error">
+  
+    </div>
+    <div class="error-mensaje">
+  
+    </div>
+  </div>
+
+
+  <ion-icon name="backspace-sharp"  class="back" (click)="Back()"></ion-icon>
+
+</div>

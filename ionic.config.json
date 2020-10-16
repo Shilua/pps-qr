@@ -1,0 +1,7 @@
+{
+  "name": "crypt-qr",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,67 @@
+
+<ion-backdrop class="backdrop"></ion-backdrop>
+<div class="container">
+  <!--ion-backdrop class="backdrop"></ion-backdrop-->
+  <ion-spinner name="bubbles" duration=500 class="spinner"></ion-spinner>
+  
+  <ion-icon name="wallet-outline" (click)="users()"></ion-icon>
+  <div class="container-logo">
+    <div class="logo"></div>
+  </div>
+
+  <div class="container-form">
+
+    <form (ngSubmit)="Login()" class="form">
+      <ion-input class="input user-input" type="text" clear-input id="correo" maxlength="35" name="mail"
+        [(ngModel)]='mail' placeholder="Correo electrónico" (ionFocus)='shadow()' (ionBlur)='noShadow()'></ion-input>
+      <ion-input class="input pass-input" type="password" clear-input id="pass" maxlength="20" name="password"
+        [(ngModel)]='password' placeholder="Contraseña" (ionFocus)='shadow()' (ionBlur)='noShadow()' (keyup.enter)="Login()"></ion-input>
+
+      <div class="container-btn">
+        <ion-button class="btn-login" color="light" id="loginButton" color="light" type="submit"
+          [disabled]="mail === '' || password.length < 4 ">Entrar</ion-button>
+      </div>
+    </form>
+  </div>
+  <div class="lista-usuarios" *ngIf="(mail == '' || password == '') && showUser; then select">
+
+
+  </div>
+
+  <ng-template #select>
+    <select (change)="completar()" id="select" class="lista-usuarios">
+      <option selected hidden>Seleccione un usuario</option>
+      <option *ngFor="let usuario of usuarios | async" [value]="usuario.correo">
+        {{usuario.correo}}
+      </option>
+    </select>
+  </ng-template>
+  
+  <div class="container-error">
+    <div class="img-error">
+  
+    </div>
+    <div class="error-mensaje">
+  
+    </div>
+  </div>
+</div>
+
+
+<ng-template #select>
+  <select (change)="completar()" id="select" class="lista-usuarios">
+    <option selected hidden>Seleccione un usuario</option>
+    <option *ngFor="let usuario of usuarios | async" [value]="usuario.correo">
+      {{usuario.correo}}
+    </option>
+  </select>
+</ng-template>
+
+<div class="container-error">
+  <div class="img-error">
+
+  </div>
+  <div class="error-mensaje">
+
+  </div>
+</div>
