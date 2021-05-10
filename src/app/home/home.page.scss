@@ -8,7 +8,7 @@
 {
   width: 100vw;
   height: 100vh;
-  background: url(../../assets/img/fondo.jpg);
+  background: url(../../assets/img/fondo-abstracto.jpg);
   background-size: cover;
   transition: all 1s ease;
   
@@ -30,9 +30,9 @@
 .logo {
   height: 200px;
   width: 200px;
-  background: url(../../assets/img/icon-crypto.png) center;
+  background: url(../../assets/img/qr.gif) center;
   background-size: cover;
-  animation: rotacion 3s infinite;
+  //animation: rotacion 3s infinite;
 }
 
 @keyframes rotacion
@@ -115,7 +115,7 @@ ion-icon {
 
 .btn-login {
   width: 100% !important;
-  --ion-color-base: #ff9500!important;
+  --ion-color-base: #0011ff!important;
   //border: #2f1f13 4px solid;
   border-radius: 10px;
   box-shadow: 1px 13px 24px 9px rgba(0,0,0,0.75);
